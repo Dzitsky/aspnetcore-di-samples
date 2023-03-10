@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
 using System.Data.Common;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Npgsql;
 using WebApp1.DAL;
 
@@ -29,7 +25,28 @@ namespace WebApp1
             services
                 .AddScoped<DbConnection>(_ => new NpgsqlConnection(Configuration.GetConnectionString("SomeDatabase")))
                 .AddTransient<ISomeRepository, SomeRepository>()
+
+                //Test Life Cycle
+                .AddSingleton<ISingleton, TestLifeCycle>()
+                .AddTransient<ITransient, TestLifeCycle>()
+                .AddScoped<IScoped, TestLifeCycle>()
+
+                //.AddSingleton<ISomeRepository>(p =>
+                //{ 
+                //    var db = p.GetRequiredService<DbConnection>();
+                //    var logger = p.GetRequiredService<ILogger<SomeRepository>>();
+
+                //    return new SomeRepository(db, logger);  
+
+                //})
+
                 .AddControllers();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.CustomSchemaIds(type => type.FullName.Replace("+", "_"));
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Advertisement Api", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +56,9 @@ namespace WebApp1
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", ""));
 
             app.UseRouting();
 

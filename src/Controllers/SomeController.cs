@@ -22,7 +22,7 @@ namespace WebApp1.Controllers
         {
             _logger.LogInformation("Get method called");
 
-            return "some result";
+            return _someRepository.GetTestLifeCycle();
         }
 
         [HttpGet("/get_item/{id:int}")]
