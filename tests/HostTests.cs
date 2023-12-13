@@ -1,4 +1,3 @@
-using System;
 using System.Data.Common;
 using System.Net;
 using System.Net.Http;
@@ -12,10 +11,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 using Shouldly;
-using WebApp1;
-using WebApp1.DAL;
+using WebApp;
+using WebApp.DAL;
 
-namespace Di.Samples
+namespace Di.TestSamples
 {
     public class HostTests
     {

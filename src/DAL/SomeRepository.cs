@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Logging;
 
-namespace WebApp1.DAL
+namespace WebApp.DAL
 {
     public class SomeRepository : ISomeRepository
     {

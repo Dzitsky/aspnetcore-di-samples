@@ -8,3 +8,9 @@ report
 tools
 /tests/coverage.info
 /tests/test-results.xml
+*.v2
+*.vsidx
+*.bin
+*.testlog
+*.manifest
+*.suo

@@ -1,8 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp1", "src\WebApp1.csproj", "{99184F71-1FD3-44F7-86BD-AA1B2451CB54}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34302.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\WebApp.csproj", "{99184F71-1FD3-44F7-86BD-AA1B2451CB54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Di.Samples", "tests\Di.Samples.csproj", "{87B8CA37-5DDC-4D72-A7AF-7895F0DEEF6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Di.TestSamples", "tests\Di.TestSamples.csproj", "{87B8CA37-5DDC-4D72-A7AF-7895F0DEEF6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{912EBCB3-AC88-4CE6-AA2D-28E4D30419E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{39E5157D-03F8-42D1-AC73-4D8A1AA43F98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +25,15 @@ Global
 		{87B8CA37-5DDC-4D72-A7AF-7895F0DEEF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B8CA37-5DDC-4D72-A7AF-7895F0DEEF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B8CA37-5DDC-4D72-A7AF-7895F0DEEF6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99184F71-1FD3-44F7-86BD-AA1B2451CB54} = {912EBCB3-AC88-4CE6-AA2D-28E4D30419E1}
+		{87B8CA37-5DDC-4D72-A7AF-7895F0DEEF6E} = {39E5157D-03F8-42D1-AC73-4D8A1AA43F98}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2EB080A-83E7-4D8F-880A-218F6B6CBC4B}
 	EndGlobalSection
 EndGlobal

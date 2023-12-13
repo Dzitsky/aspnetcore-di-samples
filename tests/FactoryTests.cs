@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using NUnit.Framework;
 using Shouldly;
 
-namespace Di.Samples
+namespace Di.TestSamples
 {
     public class FactoryTests
     {

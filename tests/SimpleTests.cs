@@ -1,9 +1,9 @@
-using System;
+
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using Shouldly;
 
-namespace Di.Samples
+namespace Di.TestSamples
 {
     public class SimpleTests
     {
@@ -12,7 +12,7 @@ namespace Di.Samples
         {
             var services = new ServiceCollection();
 
-            services.AddTransient<ISomeService, SomeService>();
+            services.AddTransient<SomeService, SomeService>();
 
             using var serviceProvider = services.BuildServiceProvider();
 
