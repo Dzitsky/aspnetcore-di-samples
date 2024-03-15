@@ -1,4 +1,4 @@
-namespace WebApp1.DAL
+namespace WebApp.DAL
 {
     public class SomeItem
     {

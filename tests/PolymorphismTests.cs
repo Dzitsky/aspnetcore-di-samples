@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using NUnit.Framework;
 using Shouldly;
 
-namespace Di.Samples
+namespace Di.TestSamples
 {
     public class PolymorphismTests
     {

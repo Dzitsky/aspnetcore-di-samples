@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Logging;
 
-namespace WebApp1.DAL
+namespace WebApp.DAL
 {
     /// <inheritdoc />
     public class SomeRepository : ISomeRepository

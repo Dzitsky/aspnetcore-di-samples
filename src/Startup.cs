@@ -7,9 +7,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Npgsql;
-using WebApp1.DAL;
+using WebApp.DAL;
 
-namespace WebApp1
+namespace WebApp
 {
     public class Startup
     {

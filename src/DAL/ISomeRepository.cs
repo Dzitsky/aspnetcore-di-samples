@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WebApp1.DAL
+namespace WebApp.DAL
 {
     /// <summary>
     /// Репозиторий 
