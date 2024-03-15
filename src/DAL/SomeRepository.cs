@@ -17,14 +17,15 @@ namespace WebApp1.DAL
         private readonly IScoped _scoped1, _scoped2;
         private readonly ITransient _transient1, _transient2;
 
-        public SomeRepository(DbConnection dbConnection, ILogger<SomeRepository> logger
+        public SomeRepository(
+            DbConnection dbConnection, ILogger<SomeRepository> logger
             , ISingleton singleton1, ISingleton singleton2
             , IScoped scoped1, IScoped scoped2
             , ITransient transient1, ITransient transient2
             )
         {
-            _dbConnection = dbConnection;
-            _logger = logger;
+            //_dbConnection = dbConnection;
+            //_logger = logger;
 
             _singleton1 = singleton1;
             _singleton2 = singleton2;
@@ -44,12 +45,14 @@ namespace WebApp1.DAL
 
         public async Task<SomeItem> GetById(int id, CancellationToken cancellationToken)
         {
-            using (_logger.BeginScope(new {id}))
-                _logger.LogDebug("Requested an item");
+            //using (_logger.BeginScope(new {id}))
+            //    _logger.LogDebug("Requested an item");
 
-            return await _dbConnection.QueryFirstAsync<SomeItem>(new CommandDefinition(
-                "SELECT ID, NAME FROM SOME_ITEM WHERE ID = @ID",
-                new {id}, cancellationToken: cancellationToken));
+            //return await _dbConnection.QueryFirstAsync<SomeItem>(new CommandDefinition(
+            //    "SELECT ID, NAME FROM SOME_ITEM WHERE ID = @ID",
+            //    new {id}, cancellationToken: cancellationToken));
+
+            return new SomeItem();
         }
     }
 }
