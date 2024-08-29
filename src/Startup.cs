@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Npgsql;
 using WebApp.DAL;
+using WebApp1;
 
 namespace WebApp
 {

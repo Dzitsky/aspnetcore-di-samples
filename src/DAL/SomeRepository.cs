@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Logging;
+using WebApp1;
 
 namespace WebApp.DAL
 {
